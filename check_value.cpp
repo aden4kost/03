@@ -7,7 +7,7 @@
 
 int main() {
 
-	const std::string high_scores_filename = "../../high_scores.txt";
+	const std::string high_scores_filename = "high_scores.txt";
 	const int target_value = random_value();
 	std::string user_name = userName();
 	int attempts_count = 0;
