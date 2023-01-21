@@ -1,8 +1,14 @@
 #include <iostream>
 
+#include "random_value.h"
+#include "high_scores.h"
+#include "argument.h"
+
 int main() {
 
-	const int target_value = 54;
+	const int target_value = random_value();
+	const std::string user_name = userName();
+	int attempts_count = 0;
 	int current_value = 0;
 	bool not_win = true;
 
@@ -13,9 +19,11 @@ int main() {
 
 		if (current_value < target_value) {
 			std::cout << "greater than " << current_value << std::endl;
+			attempts_count++;
 		}
 		else if (current_value > target_value) {
 			std::cout << "less than " << current_value << std::endl;
+			attempts_count++;
 		}
 		else {
 			std::cout << "you win!" << std::endl;
@@ -23,6 +31,9 @@ int main() {
 		}
 
 	} while(true);
+
+	int writeScore(std::string user_name, int attempts_count);
+	int readScoreTable(std::string high_scores_filename);
 
 	return 0;
 }

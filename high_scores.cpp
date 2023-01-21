@@ -2,26 +2,12 @@
 #include <fstream>
 #include <string>
 
-int main() {
+#include "high_scores.h"
 
 	const std::string high_scores_filename = "high_scores.txt";
 
-	// Ask about name
-	std::cout << "Hi! Enter your name, please:" << std::endl;
-	std::string user_name;
-	std::cin >> user_name;
-
-	// Get the last high score
-	std::cout << "Enter your high score:" << std::endl;
-	int attempts_count = 0;
-	std::cin >> attempts_count;
-	if (std::cin.fail()) {
-		std::cout << "Bad value!" << std::endl;
-		return -1;
-	}
-
 	// Write new high score to the records table
-	{
+	int writeScore(std::string user_name, int attempts_count) {
 		// We should open the output file in the append mode - we don't want
 		// to erase previous results.
 		std::ofstream out_file{high_scores_filename, std::ios_base::app};
@@ -37,7 +23,8 @@ int main() {
 	} // end of score here just to mark end of the logic block of code
 
 	// Read the high score file and print all results
-	{
+	int readScoreTable(std::string high_scores_filename) {
+
 		std::ifstream in_file{high_scores_filename};
 		if (!in_file.is_open()) {
 			std::cout << "Failed to open file for read: " << high_scores_filename << "!" << std::endl;
@@ -63,7 +50,6 @@ int main() {
 			// Print the information to the screen
 			std::cout << username << '\t' << high_score << std::endl;
 		}
-	}
 
-	return 0;
-}
+		return 0;
+	}
