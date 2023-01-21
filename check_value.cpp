@@ -32,7 +32,7 @@ int main() {
 
 	} while(true);
 
-	int writeScore(std::string user_name, int attempts_count);
+	int writeScore(const std::string user_name, int attempts_count);
 	int readScoreTable(std::string high_scores_filename);
 
 	return 0;
