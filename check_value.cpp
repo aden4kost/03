@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "random_value.h"
 #include "high_scores.h"
