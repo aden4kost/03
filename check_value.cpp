@@ -8,7 +8,7 @@
 int main() {
 
 	const int target_value = random_value();
-	const std::string user_name = userName();
+	std::string user_name = userName();
 	int attempts_count = 0;
 	int current_value = 0;
 	bool not_win = true;
@@ -33,7 +33,7 @@ int main() {
 
 	} while(true);
 
-	int writeScore(const std::string user_name, int attempts_count);
+	int writeScore(std::string user_name, int attempts_count);
 	int readScoreTable(std::string high_scores_filename);
 
 	return 0;
