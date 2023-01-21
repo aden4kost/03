@@ -7,6 +7,7 @@
 
 int main() {
 
+	const std::string high_scores_filename = "../../high_scores.txt";
 	const int target_value = random_value();
 	std::string user_name = userName();
 	int attempts_count = 0;
@@ -33,7 +34,7 @@ int main() {
 
 	} while(true);
 
-	int writeScore(std::string user_name, int attempts_count);
+	int writeScore(std::string user_name, int attempts_count, const std::string high_scores_filename);
 	int readScoreTable(std::string high_scores_filename);
 
 	return 0;

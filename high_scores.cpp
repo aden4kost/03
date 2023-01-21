@@ -4,10 +4,8 @@
 
 #include "high_scores.h"
 
-	const std::string high_scores_filename = "high_scores.txt";
-
 	// Write new high score to the records table
-	int writeScore(std::string user_name, int attempts_count) {
+	int writeScore(std::string user_name, int attempts_count, const std::string high_scores_filename) {
 		// We should open the output file in the append mode - we don't want
 		// to erase previous results.
 		std::ofstream out_file{high_scores_filename, std::ios_base::app};
@@ -23,7 +21,7 @@
 	} // end of score here just to mark end of the logic block of code
 
 	// Read the high score file and print all results
-	int readScoreTable(std::string high_scores_filename) {
+	int readScoreTable(const std::string high_scores_filename) {
 
 		std::ifstream in_file{high_scores_filename};
 		if (!in_file.is_open()) {
