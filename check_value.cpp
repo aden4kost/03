@@ -34,8 +34,11 @@ int main() {
 
 	} while(true);
 
-	int writeScore(std::string user_name, int attempts_count, const std::string high_scores_filename);
-	int readScoreTable(std::string high_scores_filename);
+	//int is_write = writeScore(user_name, attempts_count, high_scores_filename);
+	//int is_read = readScoreTable(high_scores_filename);
+
+	writeScore(user_name, attempts_count, high_scores_filename);
+	readScoreTable(high_scores_filename);
 
 	return 0;
 }

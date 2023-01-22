@@ -18,6 +18,8 @@
 		out_file << user_name << ' ';
 		out_file << attempts_count;
 		out_file << std::endl;
+
+		return 0;
 	} // end of score here just to mark end of the logic block of code
 
 	// Read the high score file and print all results
