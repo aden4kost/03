@@ -34,9 +34,6 @@ int main() {
 
 	} while(true);
 
-	//int is_write = writeScore(user_name, attempts_count, high_scores_filename);
-	//int is_read = readScoreTable(high_scores_filename);
-
 	writeScore(user_name, attempts_count, high_scores_filename);
 	readScoreTable(high_scores_filename);
 

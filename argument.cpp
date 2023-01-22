@@ -5,7 +5,7 @@
 
 std::string userName() {
 
-	std::string user_name = userName();
+	std::string user_name = "";
 	
 	std::cout << "Hi! Enter your name, please:" << std::endl;
     std::cin >> user_name;
