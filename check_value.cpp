@@ -14,7 +14,7 @@ int main() {
 	int current_value = 0;
 	bool not_win = true;
 
-	std::cout << "Enter your guess:" << std::endl;
+	std::cout << "Enter your guess [integer number from 0 to 100]:" << std::endl;
 
 	do {
 		std::cin >> current_value;
@@ -28,7 +28,8 @@ int main() {
 			attempts_count++;
 		}
 		else {
-			std::cout << "you win!" << std::endl;
+			attempts_count++;
+			std::cout << "You win! " << "Attempts: " << attempts_count << std::endl;
 			break;
 		}
 
