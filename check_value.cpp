@@ -3,13 +3,11 @@
 
 #include "random_value.h"
 #include "high_scores.h"
-#include "argument.h"
+#include "invitation.h"
+#include "check_value.h"
 
-int main() {
+int check_value(int target_value) {
 
-	const std::string high_scores_filename = "../../high_scores.txt";
-	const int target_value = random_value();
-	std::string user_name = userName();
 	int attempts_count = 0;
 	int current_value = 0;
 	bool not_win = true;
@@ -35,8 +33,5 @@ int main() {
 
 	} while(true);
 
-	writeScore(user_name, attempts_count, high_scores_filename);
-	readScoreTable(high_scores_filename);
-
-	return 0;
+	return attempts_count;
 }
